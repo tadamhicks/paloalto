@@ -4,6 +4,7 @@ import urllib2
 import xml.etree.ElementTree as ET
 import sys
 import json
+import ssl
 
 
 def palo(pa_ip, pa_key, cmd, parameters):
