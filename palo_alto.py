@@ -7,7 +7,7 @@ import json
 import ssl
 
 
-def palo(pa_ip, pa_key, cmd, RULENAME=None, IP_ADDR=None, call_type):
+def palo(pa_ip, pa_key, RULENAME=None, IP_ADDR=None, call_type):
 	
 	ctx = ssl.create_default_context()
 	ctx.check_hostname = False
@@ -65,9 +65,8 @@ def palo(pa_ip, pa_key, cmd, RULENAME=None, IP_ADDR=None, call_type):
 if __name__ == "__main__":
 	pa_ip = sys.argv[1]
 	pa_key = sys.argv[2]
-	cmd = sys.argv[3]
-	RULENAME = sys.argv[4]
-	IP_ADDR = sys.argv[5]
-	call_type = sys.argv[6]
+	RULENAME = sys.argv[3]
+	IP_ADDR = sys.argv[4]
+	call_type = sys.argv[5]
 	
-	palo(pa_ip, pa_key, cmd, RULENAME, IP_ADDR, call_type)
+	palo(pa_ip, pa_key, RULENAME, IP_ADDR, call_type)
