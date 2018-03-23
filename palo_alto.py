@@ -16,13 +16,13 @@ def palo(pa_ip, pa_key, cmd, RULENAME, IP_ADDR, call_type):
 	if call_type == "A":
 
 		parameters = {
-			"xpath": "/config/devices/entry/vsys/entry[@name=\'vsys4\']/rulebase/security/rules/entry[@name=%s]" % (RULENAME), 
-			"element": "<source><member:Inbound-Global-F5</member></source><destination><member>%s</member></destination><service><member>application-default</member></service><application><member>ssl</member><member>ping</member></application><category><member>any</member></category><hip-profiles><member>any</member></hip-profiles><action>allow</action><source-user><member>any</member></source-user><log-start>yes</log-start><log-end>no</log-end><description>morpheus testing</description><from><member>infra-untrust</member></from><to><member>infra-public</member></to>" % (IP_ADDR)
+			"xpath": "/config/devices/entry/vsys/entry[@name='vsys4']/rulebase/security/rules/entry[@name='%s']" % (RULENAME), 
+			"element": "<source><member>Inbound-Global-F5</member></source><destination><member>%s</member></destination><service><member>application-default</member></service><application><member>ssl</member><member>ping</member></application><category><member>any</member></category><hip-profiles><member>any</member></hip-profiles><action>allow</action><source-user><member>any</member></source-user><log-start>yes</log-start><log-end>no</log-end><description>morpheus testing</description><from><member>infra-untrust</member></from><to><member>infra-public</member></to>" % (IP_ADDR)
 		}
 	elif call_type == "B":
 
 		parameters = {
-			"xpath": "/config/devices/entry/vsys/entry[@name=\'vsys4\']/rulebase/security/rules/entry[@name=%s]" % (RULENAME),
+			"xpath": "/config/devices/entry/vsys/entry[@name='vsys4']/rulebase/security/rules/entry[@name='%s']" % (RULENAME),
 			"where": "before", 
 			"dst": "Deny All"
 		}
