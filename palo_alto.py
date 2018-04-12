@@ -31,10 +31,11 @@ def palo(pa_ip, pa_key, cmd, RULENAME, IP_ADDR, call_type):
 			"cmd": "<commit></commit>"
 		}
 
-    elif call_type == "D":
-    	parameters = {
-    		"xpath": "/config/devices/entry/vsys/entry[@name='vsys4']/rulebase/security/rules/entry[@name='%s']" % (RULENAME)
-    	}
+	elif call_type == "D":
+		parameters = {
+			"xpath": "/config/devices/entry/vsys/entry[@name='vsys4']/rulebase/security/rules/entry[@name='%s']" % (RULENAME)
+		}
+	
 	else:
 		print "INSUFFICIENT CALL TYPE"
 		sys.exit(1)
